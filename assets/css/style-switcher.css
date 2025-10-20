@@ -1,0 +1,375 @@
+/*.style-switcher
+{
+    position:fixed;
+    right: 0;
+    top: 60px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+.style-switcher.open
+{
+    transform:translateX(-25px);
+}
+.style-switcher .s-icon
+{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    border: 1px solid var(--bg-black-50);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.style-switcher .s-icon i
+{
+    line-height: 40px;
+}
+.style-switcher .style-switcher-toggler
+{
+    top: 0;
+}
+.style-switcher .day-night
+{
+    top: 55px;
+}
+.style-switcher.day-night
+{
+    top: 55px;
+}
+.style-switcher .h5
+{
+margin: 0 0 10px;
+color: var(--text-black-700);
+font-size: 16px;
+font-weight: 600;
+text-transform: capitalize;
+}
+.style-switcher.colors
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.style-switcher.color-1
+{
+    background: #ec1839;
+}
+.style-switcher.color-2
+{
+    background: #fa5b0f;
+}
+.style-switcher.color-3
+{
+    background: #37b182;
+}
+.style-switcher.color-4
+{
+    background: #1854b4;
+}
+.style-switcher.color-5
+{
+    background: #f021b2;
+}
+
+/*
+/* Container for the style switcher /
+.style-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9; /* Background color for the container /
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's on top /
+    transform: translateX(4%);
+}
+.style-switcher.open
+{
+    transform:translateX(25px);
+}
+
+/* Toggler Icon Style (Cog Icon) /
+.style-switcher-toggler {
+    font-size: 24px; /* Size of the icon /
+    color: #333; /* Icon color /
+    cursor: pointer;
+    margin-bottom: 10px; /* Spacing between cog and moon /
+}
+
+.style-switcher-toggler i {
+    animation: spin 2s linear infinite; /* Spin effect */
+}
+
+/* Day-Night Icon Style (Moon Icon) /
+.day-night {
+    font-size: 24px; /* Size of the moon icon /
+    color: #333; /* Moon icon color /
+    cursor: pointer;
+}
+
+/* Optional: Animation for spinning cog 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.style-switcher .h5
+{
+margin: 0 0 10px;
+color: var(--text-black-700);
+font-size: 16px;
+font-weight: 600;
+text-transform: capitalize;
+}
+.style-switcher.colors
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.style-switcher.color-1
+{
+    background: #ec1839;
+}
+.style-switcher.color-2
+{
+    background: #fa5b0f;
+}
+.style-switcher.color-3
+{
+    background: #37b182;
+}
+.style-switcher.color-4
+{
+    background: #1854b4;
+}
+.style-switcher.color-5
+{
+    background: #f021b2;
+}
+
+*/
+
+/* Basic reset */
+body, h5, div, span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style switcher container */
+  /* Default light mode */
+.style-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Ensure it's on top */
+    transform: translateX(110%);
+}
+
+/* Dark mode style */
+body.dark-mode .style-switcher {
+    background-color: hsl(0, 50%, 98%); /* Dark background color */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for contrast */
+}
+
+.style-switcher.open
+{
+    transform:translateX(-25px);
+}
+  
+  .style-switcher .s-icon
+{
+    position: absolute;
+    height: 10px;
+    width: 15px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    border: 1px solid var(--bg-black-50);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.style-switcher .s-icon i
+{
+    line-height: 10px;
+}
+  /* Toggler icon */
+  .style-switcher-toggler {
+    position: absolute;
+    bottom: 55px;
+    right: -100px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Default color */
+.style-switcher-toggler .fa-cog {
+    font-size: 20px;
+    color: hsl(0, 0%, 13%);
+}
+
+/* Change to white when dark mode is active */
+body.dark-mode .style-switcher-toggler .fa-cog {
+    color: #f6f4f4; /* White color */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .style-switcher-toggler .fa-cog {
+        font-size: 18px; /* Slightly smaller font size for small screens */
+        color: hsl(0, 0%, 20%); /* Slightly lighter color for visibility */
+    }
+
+    body.dark-mode .style-switcher-toggler .fa-cog {
+        color: #f9f6f6; /* Adjust white color for better contrast if needed */
+    }
+}
+
+/* Further adjustments for extra small screens */
+@media (max-width: 480px) {
+    .style-switcher-toggler .fa-cog {
+        font-size: 16px; /* Smaller font size for very small screens */
+    }
+}
+
+
+  /* Day-night toggle */
+  .day-night {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 45px;
+  }
+  
+  /* Theme colors heading */
+  /* Default light mode styling */
+h5 {
+    margin-bottom: 10px;
+    color: white; /* Dark color for light mode */
+}
+
+/* Dark mode styling */
+body.dark-mode h5 {
+    color:black; /* Light color for dark mode */
+}
+
+  /* Theme color options */
+  .colors {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .colors span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+  }
+  
+  .color-1 { background: #ec1839; }
+  .color-2 { background: #fa5b0f; }
+  .color-3 { background: #37b182; }
+  .color-4 { background: #1854b4; }
+  .color-5 { background: #c6c63b; }
+  
+  .colors span:hover {
+    border-color: #333;
+  }
+  /* Optional: Animation for spinning cog */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+  
+
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color for readability */
+}
+
+/* Adjust specific elements for dark mode */
+.dark-mode .header, .dark-mode .footer {
+    background-color: #1c1c1c; /* Darker background for headers and footers */
+}
+
+.dark-mode .card, .dark-mode .content {
+    background-color: #1e1e1e; /* Card and content areas background */
+    color: #f5f5f5; /* Text color for readability in content areas */
+}
+
+/* Ensure icons and buttons are visible */
+.dark-mode .btn, .dark-mode .icon {
+    color: #ffffff;
+}
+
+/* Make sure links are visible */
+.dark-mode a {
+    color: #82b1ff; /* A color that stands out against dark background */
+}
+
+/* Theme switcher itself remains visible */
+.style-switcher {
+    background-color: #333;
+}
+
+
+
+/* Theme color classes to apply different colors */
+nav.theme-color-1 { --primary-color: #ec1839; }
+nav.theme-color-2 { --primary-color: #fa5b0f; }
+nav.theme-color-3 { --primary-color: #37b182; }
+nav.theme-color-4 { --primary-color: #1854b4; }
+nav.theme-color-5 { --primary-color: #f021b2; }
+
+/* Example usage of primary color */
+body {
+    color: var(--primary-color);
+}
+
+/* Styling for specific elements using theme colors (optional) */
+.header, .footer {
+    background-color: var(--primary-color);
+}

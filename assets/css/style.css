@@ -1,0 +1,1297 @@
+.profile-pic {
+  position: absolute;
+  top: 120px; /* Adjust the top position as needed */
+  right: 50px;  /* Adjust the right position as needed */
+  width: 300px; /* Larger width */
+  height: 300px; /* Larger height */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /* Amoeba-like shape */
+  border: 8px solid #40555b66; /* Adjust border width and color */
+  overflow: hidden;
+  animation: amoeba 6s ease-in-out infinite; /* Amoeba movement animation */
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image fills the shape while maintaining aspect ratio */
+}
+
+/* Rotating border animation */
+.profile-pic::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--skin-color);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /* Match the amoeba shape */
+  animation: rotate 3s linear infinite;
+  z-index: -1;
+}
+
+/* Keyframes for rotation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Keyframes for amoeba movement */
+@keyframes amoeba {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: scale(1.05);
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: scale(1.1);
+  }
+  75% {
+    border-radius: 70% 30% 40% 60% / 30% 70% 60% 40%;
+    transform: scale(1.05);
+  }
+}
+/*
+.profile-pic {
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 31px 10px;
+  border: 6px solid #40555b66;
+  border-radius: 15px;
+}
+
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+}    
+*/
+
+
+.tracker {
+  /* visibility: hidden; */
+  position: fixed;
+  /* margin-inline-end: auto;  */
+  bottom: 0; 
+  right: 0;
+}
+
+/* For smaller screens (mobile devices) */
+@media screen and (max-width: 600px) {
+  .profile-pic {
+    max-width: 100px; /* Reduce the size */
+    max-height: 100px;
+    margin: -20px -5px; /* Adjust margins for better placement */
+    border: 4px solid #40555b66; /* Adjust border size */
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+.social {
+  margin: 0 auto;
+  width: auto;
+  text-align: inherit;
+  /* padding: 10px; */
+}
+
+/* Dark mode social icons */
+body.dark-mode .social .icon-btn {
+  color: #fff;
+}
+
+body.dark-mode .social .icon-btn:hover {
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* Body Styling for Light and Dark Modes 
+body.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.dark-mode {
+  background-color: #1d1d1d;
+  color: #e0e0e0;
+}    */
+
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: hsl(0, 3%, 71%);
+  color: #61a9c0;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.icon-btn {
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  color: #ed715e;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 100px;
+  border-radius: 45px;
+  display: inline-block;
+  margin: 4px;
+}
+
+
+.github {
+  color: black;
+}
+
+
+.linkedin {
+  color: #0077b5;
+}
+
+.hackerrank {
+  color:#12874e
+}
+.codechef {
+  color: brown;
+}
+
+
+.angellist {
+  color: grey;
+}
+
+.icon-btn:hover {
+  transform: scale(1.10);
+  color: #678ccb;
+}
+
+.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.angellist:hover {
+  background-color: grey;
+}
+
+.github:hover {
+  background-color: black;
+}
+
+.hackerrank:hover {
+  background-color:#1b532a
+}
+
+.codechef:hover{
+  background-color:rgb(158, 9, 9)
+}
+
+
+/* ========================================================== */
+/* DARK MODE: Preserve Original Social Icon Colors */
+/* ========================================================== */
+
+/* 1. LinkedIn (Original: White Icon on Blue Background) */
+body.dark-mode .social .icon-btn.linkedin {
+    /* Keep the button background as the brand color for better visibility */
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+
+body.dark-mode .social .icon-btn.linkedin i {
+    color: #fff !important; /* White icon */
+}
+
+body.dark-mode .social .icon-btn.linkedin:hover {
+    /* Slightly darker blue on hover for better effect */
+    background-color: #00568c; 
+    /* Remove the default hover color change if it was active */
+    color: #fff; 
+}
+
+/* 2. GitHub (Original: White Icon on Black Background) */
+body.dark-mode .social .icon-btn.github {
+    background-color: #333; /* Darker background for contrast, or black: #000 */
+}
+
+body.dark-mode .social .icon-btn.github i {
+    color: #fff !important; /* White icon */
+}
+
+body.dark-mode .social .icon-btn.github:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* 3. HackerRank (Original: White Icon on Dark Green Background) */
+body.dark-mode .social .icon-btn.hackerrank {
+    background-color: #12874e; /* HackerRank Green */
+}
+
+body.dark-mode .social .icon-btn.hackerrank i {
+    color: #fff !important; /* White icon */
+}
+
+body.dark-mode .social .icon-btn.hackerrank:hover {
+    background-color: #0b5f3a;
+    color: #fff;
+}
+
+
+/* 4. CodeChef (Original: White Icon on Brown/Red Background) */
+body.dark-mode .social .icon-btn.codechef {
+    background-color: brown; /* CodeChef Brown/Red */
+}
+
+body.dark-mode .social .icon-btn.codechef i {
+    color: #fff !important; /* White icon */
+}
+
+body.dark-mode .social .icon-btn.codechef:hover {
+    background-color: #a52a2a;
+    color: #fff;
+}
+
+/* ========================================================== */
+/* DARK MODE: General Text and Button Fixes (Intro Section) */
+/* ========================================================== */
+
+/* Ensure the main descriptive text is visible in dark mode */
+body.dark-mode #intro.section .caption h5 {
+    color: #e0e0e0 !important; /* Light text color for better visibility */
+}
+
+/* Fix the color of the animated typing text in Dark Mode */
+body.dark-mode #intro.section .typing {
+    /* Use a bright, contrasting color for the typed text */
+    color: #4ecdc4 !important; 
+}
+
+
+
+/* Buttons - Read Me, Contact Us */
+
+.readme {
+  position: relative;
+  padding: 11px 35px;
+  background:none ;
+  color: #040208;
+  border: 2px solid #180b0b;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: rgb(172, 167, 167);
+}
+
+.readme:hover{
+  color: #e4e3e6;
+  background-color: #322297;
+}
+
+.contactme {
+  position: relative;
+  padding: 11px 35px;
+  background: none;
+  color: #131313;
+  border: 2px solid #101b13;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #aeaaaa;
+}
+
+.contactme:hover{
+  color: hsl(255, 4%, 79%);
+  background-color: rgb(36, 29, 158);
+}
+.publications:hover{
+  color: #dcdbde;
+  background-color: rgb(186, 186, 186);
+}
+
+/* Dark mode button styles */
+body.dark-mode .readme {
+  color: #fff;
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark-mode .readme:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+body.dark-mode .contactme {
+  color: #fff;
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark-mode .contactme:hover {
+  color: #fff;
+  background-color: #555;
+}
+/* main body */
+
+/* body-color */
+
+body {
+  color: hwb(300 4% 14%);
+  font-size: 18px;
+}
+
+/* body {
+  color: black;
+  font-size: 18px;
+} */
+
+/* main a -- links */
+
+/* a {
+  color: #009688;
+} */
+
+a {
+  color: #004d40;
+}
+
+/* main blockqoute */
+
+/* blockquote {
+  border-left: 5px solid #795548;
+  color: #795548;
+  font-size: 125%;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-left: 1.5rem;
+} */
+
+blockquote {
+  border-left: 5px solid #795548;
+  color: #795548;
+  font-size: 125%;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-left: 1.5rem;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* main nav */
+nav {
+  background: rgb(120, 97, 183);
+  box-shadow: none;
+  height: 0;
+}
+
+/* Dark mode nav */
+body.dark-mode nav {
+  background: rgb(7, 36, 61);
+  box-shadow: none;
+  height: 0;
+}
+
+nav i {
+  padding: 0 15px;
+  position: relative;
+  top: 5px;
+}
+
+/* main */
+
+/* main {
+  background: url(../../assets/img/bg.png) repeat;
+  padding-left: 190px;
+} */
+
+main {
+  background: url(../../assets/img/bg.png) repeat;
+  padding-left: 170px;
+}
+
+dl {
+  margin-top: 0.5rem;
+}
+
+dd {
+  display: inline-block;
+  font-weight: 500;
+  margin-left: 0;
+}
+
+dt {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+ul.side-nav {
+  width: 200px;
+}
+
+/* Default light mode styling */
+ul.side-nav li {
+  padding: 10px; /* Adding 'px' unit to the padding value */
+  background-color: #f0f0f0; /* Background color for each list item */
+  color: hsl(180° , 100% , 27%); /* Text color for contrast */
+  border-radius: 4px; /* Optional: gives slight rounding to the corners */
+  margin-bottom: 5px; /* Space between list items for better visual separation */
+  font-size: 24px; /* Uniform size for all icons */
+  line-height: 48px; /* Vertical alignment */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* Dark mode styling */
+body.dark-mode ul.side-nav li {
+  background-color: #403e3e; /* Dark background for dark mode */
+  color: #f0f0f0; /* Light text for better contrast */
+}
+
+/* ul.side-nav.fixed a {
+  box-sizing: content-box;
+  color: rgb(48, 122, 207);
+  display: block;
+  line-height: 100%;
+  padding: 10px 0 12px;
+} */
+
+ul.side-nav.fixed a {
+  box-sizing: content-box;
+  color: rgb(16, 202, 56);
+  display: block;
+  line-height: 100%;
+  padding: 10px 0 12px;
+}
+
+ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+  border: none;
+  font-weight: 200;
+}
+
+/* ul.side-nav.fixed li.logo {
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+  box-sizing: content-box;
+  min-height: 90px;
+  padding: 30px 30px 40px;
+} */
+
+ul.side-nav.fixed li.logo {
+  background-color: var(--skin-color);
+  border-bottom: 1px solid #ddd;
+  box-sizing: content-box;
+  min-height: 90px;
+  padding: 30px 30px 40px;
+}
+
+ul.side-nav.fixed li.logo a {
+  font-weight: 200;
+  line-height: 100%;
+}
+
+/*ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
+  background-color: rgb(234, 188, 188);
+  border-left: 4px solid;
+}
+
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
+  color: #333 !important;
+}
+*/
+
+li.logo span {
+  display: block;
+  font-size: 14px;
+}
+
+.brand-logo h1 {
+  font-size: inherit;
+  line-height: inherit;
+  margin: inherit;
+  font-weight: inherit;
+}
+
+.container {
+  width: 95%;
+}
+
+h3 {
+  font-weight: 200;
+  margin-bottom: 60px;
+  margin-top: 0;
+  padding: 30px 40px;
+  text-transform: lowercase;
+}
+
+/* Dark mode h3 styling */
+body.dark-mode h3 {
+  color: #fff;
+}
+
+.section {
+  padding-bottom: 30px;
+  padding-top: 0;
+  position: relative;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/* Original */
+
+/* #intro.section {
+  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
+  position: relative;
+} */
+
+/* Default light mode styling */
+#intro.section {
+  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
+  position: relative;
+}
+
+/* Dark mode styling */
+body.dark-mode #intro.section {
+  background: rgb(69, 66, 66) repeat; /* Dark background for dark mode */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving stars animation in dark mode */
+body.dark-mode #intro.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #eee, transparent),
+    radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: move-stars 20s linear infinite;
+  z-index: 0;
+}
+
+body.dark-mode #intro.section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(3px 3px at 50px 50px, #fff, transparent),
+    radial-gradient(2px 2px at 100px 20px, #eee, transparent),
+    radial-gradient(1px 1px at 150px 60px, #ddd, transparent),
+    radial-gradient(2px 2px at 200px 90px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 250px 120px;
+  animation: move-stars-reverse 25s linear infinite;
+  z-index: 0;
+}
+
+@keyframes move-stars {
+  from { transform: translateX(0); }
+  to { transform: translateX(-200px); }
+}
+
+@keyframes move-stars-reverse {
+  from { transform: translateX(0); }
+  to { transform: translateX(250px); }
+}
+ 
+#intro.section .container {
+  color: rgb(20, 19, 19);
+  font-weight: 200;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+/* Dark mode container styling */
+body.dark-mode #intro.section .container {
+  color: #fff;
+  font-weight: 200;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+/* #intro.section .container *:not(span) {
+  font-weight: 300;
+  line-height: 150%;
+  padding: 0 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+} */
+
+#intro.section .container *:not(span) {
+  font-weight: 300;
+  /* font-weight: 400; */
+  line-height: 150%;
+  /* padding: 0 0px; */
+  text-shadow: 1px 1px 5px #22212180;
+}
+
+#intro.section .underline {
+  border-bottom: 5px solid #2e3d79;
+}
+
+#intro.section .teal {
+  padding: 0 10px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.waves-effect.waves-blue .waves-ripple {
+  /* The alpha value allows the text and background color
+   of the button to still show through. */
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.card {
+  margin-bottom: 60px;
+}
+
+.card .role {
+  font-size: 1.25rem;
+  position: absolute;
+  right: 38px;
+  top: 35px;
+}
+
+.card li a {
+  margin-right: 0;
+  color: #3a3535;
+  border-bottom: 2px solid hwb(253 8% 21%);
+}
+
+.card li a:hover {
+  color: #353333;
+  font-weight: 600;
+}
+
+.card .card-content {
+  padding-bottom: 30px;
+}
+
+.card .card-content p {
+  padding: 5px 0 0;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  margin-bottom: -0.5rem;
+  margin-top: 2rem;
+}
+
+.card h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#experience .card-action {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: none;
+}
+
+#experience .card .col.s12.m2 a {
+  display: block;
+}
+
+#experience .card .col.s12.m2 a img {
+  max-height: 60px;
+}
+
+.card-action span {
+  font-size: 85%;
+  color: #666;
+}
+
+.card ul {
+  margin-bottom: 0;
+}
+
+.card ul li {
+  line-height: 200%;
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
+.card ul li li {
+  color: #666;
+  font-size: 13px;
+}
+
+.card .card-title {
+  font-size: 24px;
+}
+
+.card .card-content .card-title {
+  line-height: 2.5rem;
+}
+
+.card i.right {
+  margin-left: 10px;
+}
+
+a.hoverline {
+  border-bottom: 3px solid transparent !important;
+  padding: 3px 3px 0 3px;
+  transition: 0.25s all;
+  -moz-transition: 0.25s all;
+  -webkit-transition: 0.25s all;
+}
+
+/* Use skin color for hoverline */
+a.hoverline:hover {
+  border-bottom: 3px solid var(--skin-color) !important;
+}
+
+#skills .card.large {
+  height: 360px;
+}
+
+#skills h4 {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+#skills .col img.responsive-img {
+  margin: 0 auto;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.card.large .card-content p {
+  color: inherit;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#experience .card-content .row {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.card.large .card-image {
+  height: 230px;
+}
+
+.card.large .card-content {
+  height: auto;
+}
+
+.card.medium .card-image {
+  height: 240px;
+}
+
+.card-action a.btn-floating {
+  margin-bottom: 0;
+}
+
+#contact a:not(.btn-floating) {
+  bottom: 6px;
+  left: 20px;
+  position: relative;
+}
+
+#experience .col.s12.m2 {
+  text-align: center;
+}
+
+
+/* Example of dark mode styles */
+body.dark-mode .card-reveal ul li {
+  color: rgb(12, 12, 12); /* Sets the text color to white in dark mode */
+}
+
+/* Additional styling if needed */
+body.dark-mode .card-reveal .card-title.grey-text {
+  color: white; /* Makes the "Accomplishments" title white in dark mode */
+}
+
+
+.fa-external-link:before {
+  left: 3px;
+  position: relative;
+  top: 2px;
+}
+
+small {
+  display: none;
+}
+
+.grey-text {
+  color: #666 !important;
+}
+
+ main .teal-text 
+
+.teal-text {
+  color: rgb(14, 5, 82) !important;
+}
+
+.teal-text {
+  color: #18848e !important;
+}
+
+/* Dark mode teal-text */
+body.dark-mode .teal-text {
+  color: #ec1839 !important;
+}
+
+
+/* Use skin color for teal elements 
+.teal-text {
+  color: var(--skin-color) !important;
+}
+
+.teal {
+  background-color: var(--skin-color) !important;
+}
+
+.teal- {
+  background-color: var(--skin-color) !important;
+}
+*/
+
+@media (min-width: 1200px) {
+  #experience .container {
+    width: 860px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .card ul li {
+    font-size: 14px;
+    line-height: 200%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .card ul li {
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    padding-left: 0px;
+    padding-top: 64px;
+  }
+  ul.side-nav a {
+    line-height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  nav {
+    background: #fff;
+    height: 64px;
+    position: absolute;
+  }
+  nav a.button-collapse, nav a.button-collapse i {
+    color: #458181;
+    height: 56px;
+    line-height: 56px;
+  }
+  h3 {
+    padding: 20px 30px;
+    margin-bottom: 40px;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  nav.hide-on-large.only.trigger {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .name-title {
+    display: block;
+    height: 100%;
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .name-title>span, .name-title>a {
+    position: relative;
+    line-height: 20px;
+  }
+  .name-title a {
+    font-size: 22px;
+    display: block;
+  }
+  .name-title span {
+    display: block;
+    font-size: 14px;
+  }
+  h3, .container {
+    position: relative;
+    top: 64px;
+  }
+  section#intro {
+    margin-bottom: -64px;
+  }
+  .card .role {
+    position: relative;
+    right: initial;
+    top: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+    line-height: 200%;
+    margin: 30px 0 0;
+  }
+  #intro.section .container *:not(span) {
+    padding: 0;
+  }
+  .card .card-content .card-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #experience span.card-title {
+    text-align: center;
+    display: block;
+  }
+  #experience span.card-title a {
+    margin: 0;
+  }
+  i.mdi-navigation-close.right {
+    position: relative;
+    bottom: 15px;
+  }
+  #contact a:not(.btn-floating) {
+    text-align: center;
+    display: block;
+    left: initial;
+    bottom: initial;
+  }
+  #contact a.btn-floating.btn-large {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #intro.section {
+    background-position-x: 30%;
+  }
+}
+.contact.contact-form.col-6
+{
+  flex:0 0 100%;
+  max-width: 50%;
+}
+.contact.contact-form.col-12
+{
+  flex:0 0 100%;
+  max-width: 100%;
+}
+.contact.contact-form.form-item
+{
+ margin-bottom: 30px;
+}
+.contact.contact-form.form-item.form-control
+{
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--bg-black-100);
+  border: 1px solid var((--bg-black-50));
+  padding: 10px 25px;
+  font-size: 16px;
+  color: var(--text-black-700);
+  transition: all 0.3s ease;
+}
+.contact.contact-form.form-item.form-control:focus
+{
+  box-shadow: 0 0 20px rgba(48,46,77,0.15);
+}
+.contact.contact-form.form-item textarea.form-control
+{
+  height:140px;
+}
+.contact.contact-form.icon-btn
+{
+  height: 20px;
+  padding: 20 20px;
+}
+
+
+
+.message-textarea {
+  min-height: 80px; /* Reduced min height for textarea */
+ /* max-height: 120px;  Set maximum height for textarea */
+  /*resize: vertical;  Allow vertical resize only */
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px; /* Reduced padding for button */
+  border: none;
+  cursor: pointer;
+}
+
+/* Glitter sparkle animation */
+@keyframes glitterSparkle {
+  0%, 50% {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Apply to dark mode only */
+body.dark-mode ul.side-nav li {
+  padding: 2px;
+  background-color: #333;
+  color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 2px solid #555; /* Dark border */
+
+  /* Add glitter animation to the border */
+  animation: glitterSparkle 3s infinite alternate;
+}
+/* Media query for phone screens */
+@media (max-width: 600px) {
+  body.dark-mode ul.side-nav li {
+    padding: 5px; /* Increase padding for better touch targets */
+    font-size: 0.9rem; /* Adjust font size for readability */
+    margin-bottom: 8px; /* Add more space between items */
+  }
+}
+
+/* Media query for tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  body.dark-mode ul.side-nav li {
+    padding: 4px; /* Slightly increase padding */
+    font-size: 1rem; /* Adjust font size for readability on tablets */
+    margin-bottom: 6px;
+  }
+}
+
+
+/*           03/01/2025      */
+
+
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .side-nav {
+    width: 80%; /* Ensure the sidebar shrinks to fit smaller screens */
+  }
+
+  .side-nav .bold {
+    padding: 10px 8px; /* Reduce padding for smaller screens */
+  }
+
+  .side-nav i {
+    font-size: 20px; /* Resize icons on small screens */
+  }
+
+  .side-nav .bold span {
+    font-size: 16px; /* Adjust font size for labels */
+  }
+}
+
+/* Dynamic Styles and Interactivity Enhancements */
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in to sections */
+.section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Interactive card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Glowing effects for buttons and icons */
+.icon-btn, .readme, .contactme {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover, .readme:hover, .contactme:hover {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Gradient backgrounds removed to allow style switcher to work */
+
+/* Improved button styles with animations */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Additional glowing for social icons */
+.social .icon-btn {
+  position: relative;
+}
+
+.social .icon-btn::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social .icon-btn:hover::before {
+  opacity: 1;
+}
+
+/* Scroll-triggered animations (CSS-only approximation with delays) */
+.section:nth-child(1) { animation-delay: 0s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+.section:nth-child(4) { animation-delay: 0.6s; }
+.section:nth-child(5) { animation-delay: 0.8s; }
+.section:nth-child(6) { animation-delay: 1s; }
+.section:nth-child(7) { animation-delay: 1.2s; }
+.section:nth-child(8) { animation-delay: 1.4s; }
+
+
+
+
+
+
+/* contact */
+ /* Glassmorphic effect for the form card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(45, 33, 43, 0.25);
+    transition: all 0.4s ease;
+     box-shadow: 0 1px 0 0 #009688 !important;
+      border-bottom: 2px solid #009688 !important;
+  }
+  .glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Input animation */
+  .input-animate:focus {
+    border-bottom: 2px solid #1d3750 !important;
+    box-shadow: 0 1px 0 0 #1c4a45 !important;
+    transform: scale(1.02);
+    transition: 0.3s ease;
+  }
+
+  /* Contact info card */
+  .contact-info-card {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+  }
+  .contact-info-card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Fade-in on scroll */
+  [data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  [data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Title Styling */
+  .page-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
