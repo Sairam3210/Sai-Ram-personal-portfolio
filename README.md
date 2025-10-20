@@ -2,6 +2,12 @@
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
 > https://sairamkondabattula.github.io
+## Website preview
+
+<img width="1917" height="913" alt="image" src="https://github.com/user-attachments/assets/7394ff19-ce50-4c82-a150-ee048d330ad1" />
+<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/21f8695e-ebc6-4b9b-a424-652dda7c3348" />
+
+
 
 :star: Star me on GitHub — it helps!
 
