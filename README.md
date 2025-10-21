@@ -1,8 +1,8 @@
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
-> https://sairamkondabattula.github.io
-## Website preview
+> https://sai-ram-personal-portfolio.netlify.app/
+## preview
 
 <img width="1917" height="913" alt="image" src="https://github.com/user-attachments/assets/7394ff19-ce50-4c82-a150-ee048d330ad1" />
 <img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/21f8695e-ebc6-4b9b-a424-652dda7c3348" />
@@ -35,7 +35,7 @@
 ✔️ Contact Info\
 ✔️ Resume
 
-To view a live example, **[click here](https://sairamkondabattula.github.io/)**
+To view a live example, **[click here](https://sai-ram-personal-portfolio.netlify.app/)**
 
 ## Tools Used 🛠️
 * [<b>GitHub Pages</b>](https://create-react-app.dev/docs/deployment/#github-pages) - To host my static website (HTML, CSS, JS).
